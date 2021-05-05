@@ -1,0 +1,338 @@
+{
+    "edges": [
+        {
+            "source": "c071dac9",
+            "target": "271ea8df"
+        },
+        {
+            "source": "493ad53a",
+            "target": "271ea8df"
+        },
+        {
+            "source": "7b2c6e04",
+            "target": "271ea8df"
+        },
+        {
+            "source": "271ea8df",
+            "target": "d7b83b05"
+        },
+        {
+            "source": "93d834e1",
+            "target": "b561c692"
+        },
+        {
+            "source": "872981f9",
+            "target": "b561c692"
+        },
+        {
+            "source": "f6d9538c",
+            "target": "b561c692"
+        },
+        {
+            "source": "aed46479",
+            "target": "94112458"
+        },
+        {
+            "source": "94112458",
+            "target": "493ad53a"
+        },
+        {
+            "source": "f1d596c2",
+            "target": "acdb05cf"
+        },
+        {
+            "source": "acdb05cf",
+            "target": "c071dac9"
+        },
+        {
+            "source": "d7b83b05",
+            "target": "6ab908b8"
+        },
+        {
+            "source": "f1f1425b",
+            "target": "6ab908b8"
+        },
+        {
+            "source": "6ab908b8",
+            "target": "cae2d1c7"
+        },
+        {
+            "source": "6ab908b8",
+            "target": "872981f9"
+        },
+        {
+            "source": "6ab908b8",
+            "target": "9ca016a8"
+        },
+        {
+            "source": "6ab908b8",
+            "target": "f6d9538c"
+        },
+        {
+            "source": "cae2d1c7",
+            "target": "15b893f7"
+        },
+        {
+            "source": "9ca016a8",
+            "target": "15b893f7"
+        },
+        {
+            "source": "15b893f7",
+            "target": "93d834e1"
+        }
+    ],
+    "layers": [
+        "raw",
+        "intermediate",
+        "primary",
+        "models"
+    ],
+    "modular_pipelines": [],
+    "nodes": [
+        {
+            "full_name": "create_master_table",
+            "id": "271ea8df",
+            "modular_pipelines": [],
+            "name": "create_master_table_node",
+            "pipelines": [
+                "__default__",
+                "dp"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "full_name": "evaluate_model",
+            "id": "b561c692",
+            "modular_pipelines": [],
+            "name": "evaluate_model_node",
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "full_name": "preprocess_companies",
+            "id": "94112458",
+            "modular_pipelines": [],
+            "name": "preprocess_companies_node",
+            "pipelines": [
+                "__default__",
+                "dp"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "full_name": "preprocess_shuttles",
+            "id": "acdb05cf",
+            "modular_pipelines": [],
+            "name": "preprocess_shuttles_node",
+            "pipelines": [
+                "__default__",
+                "dp"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "full_name": "split_data",
+            "id": "6ab908b8",
+            "modular_pipelines": [],
+            "name": "split_data_node",
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "full_name": "train_model",
+            "id": "15b893f7",
+            "modular_pipelines": [],
+            "name": "train_model_node",
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "full_name": "X_test",
+            "id": "872981f9",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "X Test",
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "X_train",
+            "id": "cae2d1c7",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "X Train",
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "companies",
+            "id": "aed46479",
+            "layer": "raw",
+            "modular_pipelines": [],
+            "name": "Companies",
+            "pipelines": [
+                "__default__",
+                "dp"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "master_table",
+            "id": "d7b83b05",
+            "layer": "primary",
+            "modular_pipelines": [],
+            "name": "Master Table",
+            "pipelines": [
+                "__default__",
+                "dp",
+                "ds"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "parameters",
+            "id": "f1f1425b",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "Parameters",
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "parameters"
+        },
+        {
+            "full_name": "preprocessed_companies",
+            "id": "493ad53a",
+            "layer": "intermediate",
+            "modular_pipelines": [],
+            "name": "Preprocessed Companies",
+            "pipelines": [
+                "__default__",
+                "dp"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "preprocessed_shuttles",
+            "id": "c071dac9",
+            "layer": "intermediate",
+            "modular_pipelines": [],
+            "name": "Preprocessed Shuttles",
+            "pipelines": [
+                "__default__",
+                "dp"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "regressor",
+            "id": "93d834e1",
+            "layer": "models",
+            "modular_pipelines": [],
+            "name": "Regressor",
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "reviews",
+            "id": "7b2c6e04",
+            "layer": "raw",
+            "modular_pipelines": [],
+            "name": "Reviews",
+            "pipelines": [
+                "__default__",
+                "dp"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "shuttles",
+            "id": "f1d596c2",
+            "layer": "raw",
+            "modular_pipelines": [],
+            "name": "Shuttles",
+            "pipelines": [
+                "__default__",
+                "dp"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "y_test",
+            "id": "f6d9538c",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "Y Test",
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "y_train",
+            "id": "9ca016a8",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "Y Train",
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "data"
+        }
+    ],
+    "pipelines": [
+        {
+            "id": "__default__",
+            "name": "Default"
+        },
+        {
+            "id": "dp",
+            "name": "Dp"
+        },
+        {
+            "id": "ds",
+            "name": "Ds"
+        }
+    ],
+    "selected_pipeline": "__default__",
+    "tags": []
+}
